@@ -31,5 +31,5 @@ class Api::V1::ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :price, :expire_date,:tag_list)
     end
-  end
+  
 end
