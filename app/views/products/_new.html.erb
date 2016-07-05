@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row text-center">
+  <%= form_for(Product.new, remote: true) do |f| %>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :name, placeholder: "Product name" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :price, placeholder: "Product price" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <label>Expirey Date</label>
+      <%= f.date_select :expire_date %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :tag_list, placeholder: "Tags separated with comma" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.submit "Post", class: "button"%>
+    </div>
+  <% end %>
+</div>
+</div>

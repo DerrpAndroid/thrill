@@ -1,0 +1,4 @@
+var new_post = $("<%= escape_javascript(render(partial: @product))%>").hide();
+$('#products').prepend(new_post);
+$('#post_<%= @product.id %>').fadeIn('slow');
+$('#new_post')[0].reset();
