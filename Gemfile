@@ -6,8 +6,7 @@ gem 'rails', '4.2.6'
 #use thin server
 #gem 'thin'
 
-#passenger to change local port
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -57,13 +56,9 @@ group :development do
   gem 'quiet_assets'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  #api testing gems
-  gem 'sabisu_rails'
-  gem 'compass-rails'
-  gem 'furatto'
-  gem 'font-awesome-rails'
-  gem 'simple_form'
-
+  
+  #passenger to change local port
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

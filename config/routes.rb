@@ -1,6 +1,6 @@
 require 'api_constraints.rb'
 Rails.application.routes.draw do
-  mount SabisuRails::Engine => "/sabisu_rails"
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
