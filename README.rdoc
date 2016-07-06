@@ -1,28 +1,15 @@
-== README
+== README v1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Known Issues
 
-Things you may want to cover:
+1.) Product images uses params and not product_params. This bypasses strong parameters.
+2.) Admin panel has too many filters (default active admin). Can be removed
+3.) Created models for categories, have not implemented it. Implementation same as tags (has_many association)
+4.) admin (backoffice) requires login
+5.) 
 
-* Ruby version
+Assumptions
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1.) SKU was given to be numnerical. Used ID as sku. Column can be added to make sku unique as well
+2.) Assumed "price" to be float value
+3.) Displayed all product details together i.e price details comes in the first block rather than last

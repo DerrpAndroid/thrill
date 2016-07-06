@@ -26,7 +26,7 @@ class Api::V1::ProductsController < ApplicationController
   	end
   	def update
     product = Product.find(params[:id])
-    product.product_images.build(:img_path=>product_params[:product_images][:img_path])
+    product.product_images.build(:img_path=>params[:product_images][:img_path])
 	    if product.update(product_params)
 	      render json: product, status: 200, location: [:api, product]
 	    else
