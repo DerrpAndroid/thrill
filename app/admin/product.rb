@@ -19,9 +19,11 @@ permit_params :name,:expire_date,:price,:tag_list
 		column :id
 		column :price
 		column :expire_date
-		column "Image" do |product|
-		  image_tag product.product_images.first.img_path, class: 'my_image_size'
-		end
+		#column "Image" do |product|
+		 # image_tag product.product_images.first.img_path, class: 'my_image_size'
+		  
+		#end
+		#the image column is crashing for some reason. product association?
 		column :tag_list
 		actions
 	end
