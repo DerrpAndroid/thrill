@@ -17,7 +17,7 @@ class Api::V1::ProductsController < ApplicationController
 	def create
     product = Product.new(product_params)
     puts(product_params[:product])
-    product.product_images.build(:img_path=>params[:img_path])
+    product.product_images.build(:img_path=>params[:product_images][:img_path])
 	    if product.save
 	      render json: product, status: 201, location: [:api, product]
 	    else
