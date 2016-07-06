@@ -5,6 +5,9 @@ class ApiConstraints
   end
 
   def matches?(req)
-    @default || req.headers['Accept'].include?("application/vnd.marketplace.v#{@version}")
+    @default || request
+      .headers
+      .fetch(:accept)
+      .include?("v#{version}")
   end
 end

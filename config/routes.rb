@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   resources :products
   resources :tags, only: [:index, :show]
   namespace :api, defaults: { format: :json },
-                  constraints: { subdomain: 'api' }, path: '/'  do
+                  constraints: {}, path: '/api/v:version'  do
     scope module: :v1,
                   constraints: ApiConstraints.new(version: 1, default: true) do
-      resources :products, :only => [:show,:create,:index,:update]
+      resources :products, :only => [:show,:create,:index,:update,:destroy]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

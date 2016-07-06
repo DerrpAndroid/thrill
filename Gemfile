@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 #use thin server
-#gem 'thin'
+gem 'thin'
 
 
 
@@ -58,7 +58,7 @@ group :development do
   gem 'sqlite3'
   
   #passenger to change local port
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+  #gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
